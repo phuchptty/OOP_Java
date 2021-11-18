@@ -6,7 +6,6 @@
 package com.danghoangphuc.th_oop;
 
 /**
- *
  * @author phucp
  */
 public class Circle {
@@ -43,8 +42,12 @@ public class Circle {
     public void setColor(String color) {
         this.color = color;
     }
-    
-    public String showCircle(){
+
+    public String showCircle() {
         return "Radius: " + radius + " . Color: " + color;
+    }
+
+    public double getArea() {
+        return Math.PI * Math.pow(radius, 2);
     }
 }

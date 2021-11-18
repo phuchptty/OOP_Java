@@ -9,53 +9,27 @@ package com.danghoangphuc.th_oop;
  *
  * @author phucp
  */
-public class Employee {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private int salaryMonthly;
+public class Employee extends Person {
+    private double basicSalary;
+    private double salaryMultiplier;
 
-    public int getId() {
-        return id;
+    public double getBasicSalary() {
+        return basicSalary;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public double getSalaryMultiplier() {
+        return salaryMultiplier;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-    
-    public String getFullName(){
-        return firstName + " " + lastName;
+    public void setBasicSalary(double basicSalary) {
+        this.basicSalary = basicSalary;
     }
 
-    public int getSalaryMonthly() {
-        return salaryMonthly;
-    }
-    
-    public int getSalaryYearly(){
-        return salaryMonthly * 12;
-    }
-    
-    public void setId(int id) {
-        this.id = id;
+    public void setSalaryMultiplier(double salaryMultiplier) {
+        this.salaryMultiplier = salaryMultiplier;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setSalaryMonthly(int salaryMonthly) {
-        this.salaryMonthly = salaryMonthly;
-    }
-    
-    public String showInfomation(){
-        return "ID: " + id + "\n First Name: " + firstName + "\n Last Name: " + lastName + "\n Salary Monthly:" + salaryMonthly; 
+    public double salary() {
+        return basicSalary * salaryMultiplier;
     }
 }
